@@ -15,5 +15,7 @@ def test_moving_block():
     assert block.nextPos.row == 1 and block.nextPos.col == 1
 
 
+
+
 if __name__ == '__main__':
     pytest.main()
