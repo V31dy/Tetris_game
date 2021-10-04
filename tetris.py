@@ -1,3 +1,6 @@
+DISPLAY_WIDTH = 800
+DISPLAY_HEIGHT = 600
+
 pieceNames = ('I', 'O', 'T', 'S', 'Z', 'J', 'L')
 
 STARTING_LEVEL = 0 #Change this to start a new game at a higher level
@@ -54,3 +57,22 @@ levelSpeeds = (48,43,38,33,28,23,18,13,8,6,5,5,5,4,4,4,3,3,3,2,2,2,2,2,2,2,2,2,2
 
 baseLinePoints = (0,40,100,300,1200)
 #Total score is calculated as: Score = level*baseLinePoints[clearedLineNumberAtATime] + totalDropCount
+
+# Class for the blocks of the moving piece. Each piece is made of 4 blocks in Tetris game
+class MovingBlock:
+
+    def __init__(self):
+        self.currentPos = self.CurrentPosClass(0, 0)
+        self.nextPos = self.NextPosClass(0, 0)
+
+    class CurrentPosClass:
+
+        def __init__(self, row, col):
+            self.row = row
+            self.col = col
+
+    class NextPosClass:
+
+        def __init__(self, row, col):
+            self.row = row
+            self.col = col
